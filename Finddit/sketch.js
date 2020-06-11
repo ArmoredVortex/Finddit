@@ -1,7 +1,6 @@
 let inp;
 let head;
 let btn;
-let morebtn = [];
 function setup(){
     head = createElement('header','Finddit')
     head.style('padding','10px');
@@ -14,7 +13,7 @@ function setup(){
     btn = createButton('Search');
 }
 function draw(){
-morebtn[i].mouseClicked(console.log('hi'));
+
 }
 function mousePressed(){
 if(mouseX>1&&mouseY>208&&mouseX<121&&mouseY<261){
@@ -35,7 +34,7 @@ for(let i = 0;i<25;i++){
  img.class('card');
  createElement('p','r/'+post[i].data.subreddit);
   let head = createElement('h3',title);
- morebtn[i] = createElement('button','More');
+ createA('https://www.reddit.com'+post[i].data.permalink,'Link To Post')
   createP('');
 }
 }
